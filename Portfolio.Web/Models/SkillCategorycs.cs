@@ -3,14 +3,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Portfolio.Web.Models
 {
-    public class Skill
+    public class SkillCategorycs
     {
         [Key]
         public int Id { get; set; }
-        [DisplayName("Skill Title")]
+        [DisplayName("Name")]
         [Required(ErrorMessage = "{0} is required.")]
         [MaxLength(100, ErrorMessage = "{0} cannot be longer than 100 characters.")]
-        public string SkillsTitle { get; set; }
+        public string Name { get; set; }
 
     }
 }

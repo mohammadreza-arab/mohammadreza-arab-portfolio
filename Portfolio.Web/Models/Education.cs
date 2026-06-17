@@ -1,11 +1,27 @@
-﻿namespace Portfolio.Web.Models
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
+namespace Portfolio.Web.Models
 {
     public class Education
     {
+        [Key]
         public int Id { get; set; }
-        public string Period { get; set; }      
-        public string Title { get; set; }       
-        public string Location { get; set; }   
+        [DisplayName("Year")]
+        [Required(ErrorMessage = "{0} is required.")]
+        [MaxLength(50, ErrorMessage = "{0} cannot be longer than 50 characters.")]
+        public string Year { get; set; }
+        [DisplayName("Title")]
+        [Required(ErrorMessage = "{0} is required.")]
+        [MaxLength(100, ErrorMessage = "{0} cannot be longer than 100 characters.")]
+        public string Title { get; set; }
+        [DisplayName("Location")]
+        [Required(ErrorMessage = "{0} is required.")]
+        [MaxLength(50, ErrorMessage = "{0} cannot be longer than 50 characters.")]
+        public string Location { get; set; }
+        [DisplayName("Description")]
+        [Required(ErrorMessage = "{0} is required.")]
+        [MaxLength(250, ErrorMessage = "{0} cannot be longer than 250 characters.")]
         public string Description { get; set; }
     }
 }
