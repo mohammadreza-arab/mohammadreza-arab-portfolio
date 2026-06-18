@@ -1,5 +1,6 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\Images\Mohammadreza-Arab.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -61,7 +62,6 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\Images\Mohammadreza-Arab.jpg
 C:\Users\Mohammadreza\OneDrive\Desktop\webseit personlich\PersonalPortfolio\Portfolio.Web\wwwroot\favicon.ico
 C:\Users\Mohammadreza\OneDrive\Desktop\webseit personlich\PersonalPortfolio\Portfolio.Web\wwwroot\js\site.js
 C:\Users\Mohammadreza\OneDrive\Desktop\webseit personlich\PersonalPortfolio\Portfolio.Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css

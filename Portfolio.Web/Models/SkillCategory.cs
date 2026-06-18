@@ -12,5 +12,6 @@ namespace Portfolio.Web.Models
         [MaxLength(100, ErrorMessage = "{0} cannot be longer than 100 characters.")]
         public string Name { get; set; }
         public ICollection<Skill> Skills { get; set; }
+
     }
 }
