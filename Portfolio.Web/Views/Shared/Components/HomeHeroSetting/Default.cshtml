@@ -1,0 +1,35 @@
+﻿@model Portfolio.Web.Models.HomePageSetting;
+
+    <div class="wrap">
+        <div class="hero-grid">
+            <div>
+                <span class="eyebrow">@Model.HeroTitle</span>
+                <h1>@Model.HeroName<br></h1>
+                <p class="lede">
+                    @Model.HeroDescription
+                </p>
+                <div class="manifest" aria-label="Kurzprofil">
+                    <div class="bar"><i></i><i></i><i></i><span>~/profil</span></div>
+                    <div class="m-row"><span class="k">standort</span><span class="v">@Model.HeroLocation</span></div>
+                    <div class="m-row"><span class="k">status</span><span class="v"><span class="dot"></span>@Model.HeroFocus</span></div>
+                    <div class="m-row"><span class="k">fokus</span><span class="v">@Model.HeroFocus</span></div>
+                    <div class="m-row"><span class="k">sprachen</span><span class="v">@Model.HeroLanguage</span></div>
+                </div>
+                <div class="availability">
+                    <span class="ttl">Aktuell verfügbar für</span>
+                    <span class="pill"><span class="ck">✓</span> Ausbildung</span>
+                    <span class="pill"><span class="ck">✓</span> Praktikum</span>
+                </div>
+
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#work">Projekte ansehen <span class="arrow">↗</span></a>
+                    <a class="btn btn-ghost" href="#contact">Kontakt</a>
+                </div>
+            </div>
+            <figure class="portrait">
+                <div class="frame">
+                    <img src="~/images/hero/@Model.HeroImageName" alt="Mohammadreza Arab" onerror="this.style.display='none'" />
+                </div>
+            </figure>
+        </div>
+    </div>

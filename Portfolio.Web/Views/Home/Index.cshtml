@@ -1,14 +1,28 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-@await Html.PartialAsync("_Hero")
-@await Html.PartialAsync("_About")
-@await Html.PartialAsync("_Skill")
+<section class="hero" id="top">
+    @await Component.InvokeAsync("HomeHeroSetting")
+</section>
+<section class="block" id="about">
+    @await Component.InvokeAsync("HomeAboutSetting")
+</section>
+<section class="block" id="skills">
+    @await Component.InvokeAsync("SkillCategory")
+</section>
 @await Html.PartialAsync("_Github")
-@await Html.PartialAsync("_Cert")
+<section class="block" id="certs">
+    @await Component.InvokeAsync("Certificate")
+</section>
 @await Html.PartialAsync("_Language")
-@await Html.PartialAsync("_Erfahrung")
-@await Html.PartialAsync("_Project")
-@await Html.PartialAsync("_Learning")
+<section class="block" id="cv">
+    @await Component.InvokeAsync("Experience")
+</section>
+<section class="block" id="work">
+    @await Component.InvokeAsync("Project")
+</section>
+<section class="block" id="learning">
+    @await Component.InvokeAsync("LearningItem")
+</section>
+
 @await Html.PartialAsync("_Contact")

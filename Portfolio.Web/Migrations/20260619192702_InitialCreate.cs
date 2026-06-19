@@ -11,7 +11,7 @@ namespace Portfolio.Web.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "certificate",
+                name: "Certificate",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -23,11 +23,11 @@ namespace Portfolio.Web.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_certificate", x => x.Id);
+                    table.PrimaryKey("PK_Certificate", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "educations",
+                name: "Educations",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -39,11 +39,11 @@ namespace Portfolio.Web.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_educations", x => x.Id);
+                    table.PrimaryKey("PK_Educations", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "experiences",
+                name: "Experiences",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -57,11 +57,11 @@ namespace Portfolio.Web.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_experiences", x => x.Id);
+                    table.PrimaryKey("PK_Experiences", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "homePageSettings",
+                name: "HomePageSettings",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -87,7 +87,7 @@ namespace Portfolio.Web.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_homePageSettings", x => x.Id);
+                    table.PrimaryKey("PK_HomePageSettings", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -106,7 +106,24 @@ namespace Portfolio.Web.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "skillCategorys",
+                name: "Projects",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(300)", maxLength: 300, nullable: false),
+                    ImageName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    GitHubUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LiveDemoUrl = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Projects", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "SkillCategorys",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -115,11 +132,11 @@ namespace Portfolio.Web.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_skillCategorys", x => x.Id);
+                    table.PrimaryKey("PK_SkillCategorys", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "skill",
+                name: "Skill",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -129,18 +146,18 @@ namespace Portfolio.Web.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_skill", x => x.Id);
+                    table.PrimaryKey("PK_Skill", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_skill_skillCategorys_SkillCategoryId",
+                        name: "FK_Skill_SkillCategorys_SkillCategoryId",
                         column: x => x.SkillCategoryId,
-                        principalTable: "skillCategorys",
+                        principalTable: "SkillCategorys",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_skill_SkillCategoryId",
-                table: "skill",
+                name: "IX_Skill_SkillCategoryId",
+                table: "Skill",
                 column: "SkillCategoryId");
         }
 
@@ -148,25 +165,28 @@ namespace Portfolio.Web.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "certificate");
+                name: "Certificate");
 
             migrationBuilder.DropTable(
-                name: "educations");
+                name: "Educations");
 
             migrationBuilder.DropTable(
-                name: "experiences");
+                name: "Experiences");
 
             migrationBuilder.DropTable(
-                name: "homePageSettings");
+                name: "HomePageSettings");
 
             migrationBuilder.DropTable(
                 name: "LearningItems");
 
             migrationBuilder.DropTable(
-                name: "skill");
+                name: "Projects");
 
             migrationBuilder.DropTable(
-                name: "skillCategorys");
+                name: "Skill");
+
+            migrationBuilder.DropTable(
+                name: "SkillCategorys");
         }
     }
 }

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Experience>
+<div class="wrap">
+    <div class="block-head reveal">
+        <span class="section-tag">06 — Werdegang</span>
+        <h2 class="section-title">Erfahrung &amp; Bildung</h2>
+    </div>
+    <div class="cv-groups reveal">
+        <div class="cv-group">
+            <h3 class="cv-title">Berufserfahrung</h3>
+            @foreach (var item in Model)
+            {
+                <div class="timeline">
+                    <div class="tl-item">
+                        <span class="when">@item.Year</span>
+                        <h4>@item.Title</h4>
+                        <div class="where">@item.WorkInfo</div>
+                        <p>
+                            @item.Description
+                        </p>
+                        <div class="where"><a href="@item.CompanyUrl">@item.CompanyName</a></div>
+                    </div>
+                </div>
+            }
+        </div>
+            @await Component.InvokeAsync("Education")
+    </div>
+</div>

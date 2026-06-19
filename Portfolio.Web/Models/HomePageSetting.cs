@@ -65,7 +65,7 @@ namespace Portfolio.Web.Models
         [Required(ErrorMessage = "{0} is required.")]
         [Url(ErrorMessage = "Please enter a valid URL.")]
         public string GithubUrl { get; set; }
-        [DisplayName("Linked Url")]
+        [DisplayName("Linkedin Url")]
         [Required(ErrorMessage = "{0} is required.")]
         [Url(ErrorMessage = "Please enter a valid URL.")]
         public string LinkedinUrl { get; set; }

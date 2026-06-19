@@ -1,0 +1,18 @@
+﻿@model Portfolio.Web.Models.HomePageSetting;
+
+    <div class="wrap">
+        <div class="block-head reveal">
+            <span class="section-tag">01 — Über mich</span>
+            <h2 class="section-title">@Model.AboutTitle</h2>
+        </div>
+        <div class="about-grid reveal">
+            <aside class="about-aside">
+                <b>// auf einen Blick</b>
+                @Model.AboutSummary<br>
+            </aside>
+            <div>
+                 @Model.AboutDescription
+            </div>
+        </div>
+    </div>
+</section>

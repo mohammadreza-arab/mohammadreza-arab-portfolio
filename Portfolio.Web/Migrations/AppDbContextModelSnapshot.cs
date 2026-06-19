@@ -50,7 +50,7 @@ namespace Portfolio.Web.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("certificate");
+                    b.ToTable("Certificate");
                 });
 
             modelBuilder.Entity("Portfolio.Web.Models.Education", b =>
@@ -83,7 +83,7 @@ namespace Portfolio.Web.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("educations");
+                    b.ToTable("Educations");
                 });
 
             modelBuilder.Entity("Portfolio.Web.Models.Experience", b =>
@@ -126,7 +126,7 @@ namespace Portfolio.Web.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("experiences");
+                    b.ToTable("Experiences");
                 });
 
             modelBuilder.Entity("Portfolio.Web.Models.HomePageSetting", b =>
@@ -224,7 +224,7 @@ namespace Portfolio.Web.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("homePageSettings");
+                    b.ToTable("HomePageSettings");
                 });
 
             modelBuilder.Entity("Portfolio.Web.Models.LearningItem", b =>
@@ -255,6 +255,41 @@ namespace Portfolio.Web.Migrations
                     b.ToTable("LearningItems");
                 });
 
+            modelBuilder.Entity("Portfolio.Web.Models.Project", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.Property<string>("GitHubUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LiveDemoUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Projects");
+                });
+
             modelBuilder.Entity("Portfolio.Web.Models.Skill", b =>
                 {
                     b.Property<int>("Id")
@@ -275,7 +310,7 @@ namespace Portfolio.Web.Migrations
 
                     b.HasIndex("SkillCategoryId");
 
-                    b.ToTable("skill");
+                    b.ToTable("Skill");
                 });
 
             modelBuilder.Entity("Portfolio.Web.Models.SkillCategory", b =>
@@ -293,7 +328,7 @@ namespace Portfolio.Web.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("skillCategorys");
+                    b.ToTable("SkillCategorys");
                 });
 
             modelBuilder.Entity("Portfolio.Web.Models.Skill", b =>

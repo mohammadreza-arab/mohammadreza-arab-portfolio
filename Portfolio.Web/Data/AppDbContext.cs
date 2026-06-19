@@ -11,13 +11,14 @@ namespace Portfolio.Web.Data
         {
         }
 
-        public DbSet<HomePageSetting> homePageSettings { get; set; }
-        public DbSet<Skill> skill { get; set; }
-        public DbSet<SkillCategory> skillCategorys { get; set; }
+        public DbSet<HomePageSetting> HomePageSettings { get; set; }
+        public DbSet<Skill> Skill { get; set; }
+        public DbSet<SkillCategory> SkillCategorys { get; set; }
         public DbSet<LearningItem> LearningItems { get; set; }
-        public DbSet<Experience> experiences { get; set; }
-        public DbSet<Education> educations { get; set; }
-        public DbSet<Certificate> certificate { get; set; }
+        public DbSet<Experience> Experiences { get; set; }
+        public DbSet<Education> Educations { get; set; }
+        public DbSet<Certificate> Certificate { get; set; }
+        public DbSet<Project> Projects { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Education>;
+<div class="cv-group">
+    <h3 class="cv-title">Bildung</h3>
+    <div class="timeline">
+        @foreach (var item in Model)
+        {
+            <div class="tl-item">
+                <span class="when">@item.Year</span>
+                <h4>@item.Title</h4>
+                <div class="where">@item.Location</div>
+                <p>
+                    @item.Description
+                </p>
+            </div>
+        }
+
+    </div>
+</div>

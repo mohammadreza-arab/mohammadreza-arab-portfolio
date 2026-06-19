@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using Portfolio.Web.Data;
+using Portfolio.Web.Models;
 using System.Diagnostics;
 
 namespace Portfolio.Web.Controllers

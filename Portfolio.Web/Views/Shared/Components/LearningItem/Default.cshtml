@@ -1,0 +1,22 @@
+﻿@model IEnumerable<LearningItem>;
+    <div class="wrap">
+        <div class="block-head reveal">
+            <span class="section-tag">08 — Learning Journey</span>
+            <h2 class="section-title">Woran ich gerade arbeite</h2>
+        </div>
+        <div class="lj-list reveal">
+        @foreach (var item in Model)
+        {
+                      <div class="lj-item">
+                <div class="ico">✓</div>
+                <div class="body">
+                    <h4>@item.Title</h4>
+                    <p>@item.Description</p>
+                    </div>
+                <span class="lj-status next">@item.Status</span>
+            </div>  
+        }
+
+        </div>
+    </div>
+
