@@ -36,7 +36,7 @@
 
         <div class="field span2">
             <label asp-for="HeroDescription"></label>
-            <textarea asp-for="HeroDescription" class="form-control"></textarea>
+            <textarea asp-for="HeroDescription" class="form-control" id="editor"></textarea>
             <span asp-validation-for="HeroDescription" class="text-danger"></span>
         </div>
 
@@ -155,7 +155,33 @@
 </form>
 </div>
 </div>
+@section Style
+{
+    <link href="~/lib/ckeditor/css/ckeditor5.css" rel="stylesheet" />
+    <link href="~/lib/ckeditor/css/ckeditor5-content.css" rel="stylesheet" />
+    <link href="~/lib/ckeditor/css/ckeditor5-editor.css" rel="stylesheet" />
+}
 @section Scripts
 {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <partial name="_ValidationScriptsPartial" />
+    <script type="module">
+
+        import { ClassicEditor, editorConfig }
+        from '/lib/ckeditor/js/ckeditor-config.js';
+
+        ClassicEditor
+        .create(
+        document.querySelector('#editor'),
+        editorConfig
+        )
+        .then(editor => {
+        console.log(editor);
+        })
+        .catch(error => {
+        console.error(error);
+        });
+
+    </script>
+
 }
