@@ -18,7 +18,9 @@ namespace Portfolio.Web.Areas.Admin.Controllers
         public IActionResult Index()
         {
             var homePageSetting = _context.HomePageSettings.FirstOrDefault();
-            if (homePageSetting == null) { return View(new HomePageSetting()); }
+            if (homePageSetting == null) {
+               return RedirectToAction(nameof(Create));
+                    }
             return View(homePageSetting);
         }
         [HttpGet]
@@ -37,7 +39,7 @@ namespace Portfolio.Web.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(HomePageSetting homePageSetting,  IFormFile? HeroImageFile)
         {
-            var homePage = _context.HomePageSettings.FirstOrDefault();
+            var homePage = _context.HomePageSettings.FirstOrDefault(x=>x.Id==homePageSetting.Id);
             if (homePage != null) 
             {
                 return RedirectToAction(nameof(Edit), new { id = homePageSetting.Id });
@@ -62,9 +64,9 @@ namespace Portfolio.Web.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index)); ;
         }
         [HttpGet]
-        public IActionResult Edit()
+        public IActionResult Edit(int id)
         {
-            var homePageSetting = _context.HomePageSettings.FirstOrDefault();
+            var homePageSetting = _context.HomePageSettings.FirstOrDefault(x=>x.Id==id);
             if (homePageSetting == null) { return RedirectToAction(nameof(Create)); }
             return View(homePageSetting);
         }
@@ -72,7 +74,7 @@ namespace Portfolio.Web.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Edit(HomePageSetting homePageSetting, IFormFile? HeroImageFile)
         {
-            var homePage = _context.HomePageSettings.FirstOrDefault();
+            var homePage = _context.HomePageSettings.FirstOrDefault(x=>x.Id==homePageSetting.Id);
             if (homePage == null) { return RedirectToAction(nameof(Create)); }
             homePage.HeroTitle= homePageSetting.HeroTitle;
             homePage.HeroName= homePageSetting.HeroName;
@@ -109,6 +111,20 @@ namespace Portfolio.Web.Areas.Admin.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
-
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var homePageSetting = _context.HomePageSettings.FirstOrDefault(x => x.Id == id);
+            if (homePageSetting == null)  return RedirectToAction("Index");
+            return View(homePageSetting);
+        }
+        [HttpPost]
+        public IActionResult Delete(HomePageSetting homePageSetting)
+        {
+            var homePage = _context.HomePageSettings.FirstOrDefault(x=>x.Id== homePageSetting.Id);
+            _context.HomePageSettings.Remove(homePage);
+            _context.SaveChanges();
+            return RedirectToAction("Create");
+        }
     }
 }

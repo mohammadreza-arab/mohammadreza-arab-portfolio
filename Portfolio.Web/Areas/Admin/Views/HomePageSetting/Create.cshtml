@@ -89,7 +89,7 @@
 
         <div class="field span2">
             <label asp-for="AboutDescription"></label>
-            <textarea asp-for="AboutDescription" class="form-control"></textarea>
+                    <textarea asp-for="AboutDescription" class="form-control" id="editorr"></textarea>
             <span asp-validation-for="AboutDescription" class="text-danger"></span>
         </div>
 
@@ -181,7 +181,17 @@
         .catch(error => {
         console.error(error);
         });
-
+        ClassicEditor
+        .create(
+        document.querySelector('#editorr'),
+        editorConfig
+        )
+        .then(editor => {
+        console.log(editor);
+        })
+        .catch(error => {
+        console.error(error);
+        });
     </script>
 
 }

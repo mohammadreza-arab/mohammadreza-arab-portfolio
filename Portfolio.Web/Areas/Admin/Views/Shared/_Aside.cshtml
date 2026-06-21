@@ -1,6 +1,85 @@
 ﻿<aside class="sidebar" id="sidebar">
-    <div class="sb-brand">amir<b>.</b>admin</div>
+    <div class="sb-brand">Mohammadreza<b>.</b>Arab</div>
     <div class="sb-group">Verwaltung</div>
-    <nav id="navList"><a class="sb-link active" onclick="go('dashboard')"><svg class="ic" viewBox="0 0 24 24"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"></path></svg>Dashboard</a><a class="sb-link " onclick="go('projekte')"><svg class="ic" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Projekte<span class="ct">4</span></a><a class="sb-link " onclick="go('zertifikate')"><svg class="ic" viewBox="0 0 24 24"><path d="M12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path><path d="M9 14l-2 7 5-3 5 3-2-7"></path></svg>Zertifikate<span class="ct">4</span></a><a class="sb-link " onclick="go('sprachen')"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"></path></svg>Sprachen<span class="ct">3</span></a><a class="sb-link " onclick="go('werdegang')"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Werdegang<span class="ct">4</span></a><a class="sb-link " onclick="go('learning')"><svg class="ic" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2 2M16 16l2 2M18 6l-2 2M8 16l-2 2"></path></svg>Learning Journey<span class="ct">4</span></a></nav>
+    <nav id="navList">
+        <a class="sb-link">
+            <svg class="ic" viewBox="0 0 24 24">
+                <path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z">
+                </path>
+            </svg>
+            Dashboard
+        </a>
+        <a asp-area="Admin" asp-action="Index" asp-controller="HomePageSetting" class="sb-link">
+            <svg class="ic" viewBox="0 0 24 24">
+                <path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z">
+                </path>
+            </svg>
+            Home
+        </a>
+        <a class="sb-link " onclick="go('projekte')">
+            <svg class="ic" viewBox="0 0 24 24">
+                <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z">
+
+                </path>
+            </svg>
+            Projekte
+            <span class="ct">
+                4
+            </span>
+        </a>
+        <a class="sb-link ">
+            <svg class="ic" viewBox="0 0 24 24">
+                <path d="M12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8z">
+
+                </path>
+                <path d="M9 14l-2 7 5-3 5 3-2-7">
+
+                </path>
+            </svg>
+            Zertifikate
+            <span class="ct">
+            4
+        </span>
+    </a>
+    <a class="sb-link">
+        <svg class="ic" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9">
+
+            </circle>
+            <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18">
+
+            </path>
+        </svg>
+        Sprachen
+        <span class="ct">
+            3
+        </span>
+    </a>
+    <a class="sb-link ">
+        <svg class="ic" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9">
+
+            </circle>
+            <path d="M12 7v5l3 2">
+
+            </path>
+        </svg>
+        Werdegang
+        <span class="ct">
+            4
+        </span>
+    </a>
+    <a class="sb-link "
+        <svg class="ic" viewBox="0 0 24 24">
+            <path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2 2M16 16l2 2M18 6l-2 2M8 16l-2 2">
+
+            </path>
+        </svg>
+        Learning Journey
+        <span class="ct">
+            4
+        </span>
+    </a>
+</nav>
 </aside>
 <div class="scrim" id="scrim" onclick="toggleMenu(false)"></div>
