@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] -Panel Admin</title>
+    <link href="~/css/admin.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="app">
+        @await Html.PartialAsync("_Aside");
+        <main class="main">
+            @RenderBody()
+        </main>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/js/admin.js"></script>
+</body>
+</html>

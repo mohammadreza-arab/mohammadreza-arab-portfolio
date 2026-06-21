@@ -1,0 +1,119 @@
+@model Portfolio.Web.Models.HomePageSetting
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>HomePageSetting</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="HeroTitle" class="control-label"></label>
+                <input asp-for="HeroTitle" class="form-control" />
+                <span asp-validation-for="HeroTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HeroName" class="control-label"></label>
+                <input asp-for="HeroName" class="form-control" />
+                <span asp-validation-for="HeroName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HeroDescription" class="control-label"></label>
+                <input asp-for="HeroDescription" class="form-control" />
+                <span asp-validation-for="HeroDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HeroImageName" class="control-label"></label>
+                <input asp-for="HeroImageName" class="form-control" />
+                <span asp-validation-for="HeroImageName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HeroLocation" class="control-label"></label>
+                <input asp-for="HeroLocation" class="form-control" />
+                <span asp-validation-for="HeroLocation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HeroStatus" class="control-label"></label>
+                <input asp-for="HeroStatus" class="form-control" />
+                <span asp-validation-for="HeroStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HeroFocus" class="control-label"></label>
+                <input asp-for="HeroFocus" class="form-control" />
+                <span asp-validation-for="HeroFocus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HeroLanguage" class="control-label"></label>
+                <input asp-for="HeroLanguage" class="form-control" />
+                <span asp-validation-for="HeroLanguage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AboutTitle" class="control-label"></label>
+                <input asp-for="AboutTitle" class="form-control" />
+                <span asp-validation-for="AboutTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AboutSummary" class="control-label"></label>
+                <input asp-for="AboutSummary" class="form-control" />
+                <span asp-validation-for="AboutSummary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AboutDescription" class="control-label"></label>
+                <input asp-for="AboutDescription" class="form-control" />
+                <span asp-validation-for="AboutDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TitleContact" class="control-label"></label>
+                <input asp-for="TitleContact" class="form-control" />
+                <span asp-validation-for="TitleContact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailUrl" class="control-label"></label>
+                <input asp-for="EmailUrl" class="form-control" />
+                <span asp-validation-for="EmailUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GithubUrl" class="control-label"></label>
+                <input asp-for="GithubUrl" class="form-control" />
+                <span asp-validation-for="GithubUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LinkedinUrl" class="control-label"></label>
+                <input asp-for="LinkedinUrl" class="form-control" />
+                <span asp-validation-for="LinkedinUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MetaTitle" class="control-label"></label>
+                <input asp-for="MetaTitle" class="form-control" />
+                <span asp-validation-for="MetaTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MetaDescription" class="control-label"></label>
+                <input asp-for="MetaDescription" class="form-control" />
+                <span asp-validation-for="MetaDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

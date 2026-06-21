@@ -16,8 +16,7 @@ namespace Portfolio.Web.Models
         [MaxLength(300, ErrorMessage = "{0} cannot be longer than 300 characters.")]
         public string Description { get; set; }
         [DisplayName(" Image")]
-        [Required(ErrorMessage = "{0} is required.")]
-        public string ImageName { get; set; }
+        public string? ImageName { get; set; }
         [DisplayName("GitHub url")]
         [Required(ErrorMessage = "{0} is required.")]
         [Url(ErrorMessage = "Please enter a valid URL.")]

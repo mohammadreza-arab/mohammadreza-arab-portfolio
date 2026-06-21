@@ -14,7 +14,6 @@ namespace Portfolio.Web.Data.Configurations
             builder.Property(x => x.Issuer).IsRequired().HasMaxLength(100);
             builder.Property(x => x.Issuer).IsRequired().HasMaxLength(100);
             builder.Property(x => x.Year).IsRequired().HasMaxLength(50);
-            builder.Property(x => x.ImageName).IsRequired();
         }
     }
 }

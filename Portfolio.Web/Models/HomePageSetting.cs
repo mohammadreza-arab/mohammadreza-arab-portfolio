@@ -20,8 +20,7 @@ namespace Portfolio.Web.Models
         [MaxLength(300, ErrorMessage = "{0} cannot be longer than 300 characters.")]
         public string HeroDescription { get; set; }
         [DisplayName("Hero image")]
-        [Required(ErrorMessage = "{0} is required.")]
-        public string HeroImageName { get; set; }
+        public string? HeroImageName { get; set; }
         [DisplayName("Hero location")]
         [Required(ErrorMessage = "{0} is required.")]
         [MaxLength(100, ErrorMessage = "{0} cannot be longer than 100 characters.")]

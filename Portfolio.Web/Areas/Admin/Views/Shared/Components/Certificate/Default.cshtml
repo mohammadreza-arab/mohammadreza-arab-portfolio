@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Certificate>;
+<div class="wrap">
+    <div class="block-head reveal">
+        <span class="section-tag">04 — Zertifikate</span>
+        <h2 class="section-title">Kurse &amp; Nachweise</h2>
+    </div>
+    <div class="cert-grid reveal">
+        @foreach (var item in Model)
+        {
+            <a class="cert" href="certs/csharp-fundamentals.jpg" target="_blank" rel="noopener">
+                <div class="thumb">
+                    <img src="~/Images/certificate/@item.ImageName" alt="" onerror="this.style.display='none'">
+                </div>
+                <div class="meta">
+                    <div class="issuer">
+                        @item.Issuer
+                    </div>
+                    <h4>
+                        @item.Title
+                    </h4>
+                    <div class="year">
+                        @item.Year
+                    </div>
+                </div>
+            </a>
+        }
+
+    </div>
+</div>

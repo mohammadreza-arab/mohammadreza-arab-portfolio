@@ -1,0 +1,39 @@
+﻿<div class="topbar">
+    <div style="display:flex;align-items:center;gap:14px;">
+        <button class="menu-toggle" onclick="toggleMenu(true)" aria-label="Menü"><svg class="ic" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></button>
+        <div>
+            <h1 id="pageTitle">Dashboard</h1>
+            <div class="sub" id="pageSub">Überblick über deine Inhalte</div>
+        </div>
+    </div>
+    <button class="btn btn-primary" id="addBtn" onclick="goForm()" style="display: none;">
+        <svg class="ic" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+        <span id="addLabel">Projekt hinzufügen</span>
+    </button>
+</div>
+<div class="content">
+<section class="view active" id="view-dashboard">
+    <div class="stat-grid" id="dashStats">
+        <div class="stat-card link" onclick="go('projekte')">
+            <div class="num">4</div>
+            <div class="lbl">Projekte</div>
+        </div>
+        <div class="stat-card link" onclick="go('zertifikate')">
+            <div class="num">4</div>
+            <div class="lbl">Zertifikate</div>
+        </div>
+        <div class="stat-card link" onclick="go('sprachen')">
+            <div class="num">3</div>
+            <div class="lbl">Sprachen</div>
+        </div>
+        <div class="stat-card link" onclick="go('werdegang')">
+            <div class="num">4</div>
+            <div class="lbl">Werdegang</div>
+        </div>
+        <div class="stat-card link" onclick="go('learning')">
+            <div class="num">4</div>
+            <div class="lbl">Learning Journey</div>
+        </div>
+    </div>
+</section>
+</div>

@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Project>;
+<div class="wrap">
+    <div class="block-head reveal">
+        <span class="section-tag">07 — Projekte</span>
+        <h2 class="section-title">Was ich gebaut habe</h2>
+    </div>
+    <div class="proj-grid">
+        @foreach (var item in Model)
+        {
+            <article class="proj reveal">
+                <div class="shot">
+                    <img src="~/Images/project/@item.ImageName" alt="" onerror="this.style.display='none'">
+                </div>
+                <div class="body">
+                    <h3>@item.Title</h3>
+                    <p>
+                        @item.Description
+                    </p>            
+                    <div class="links"><a href="@item.GitHubUrl">GitHub ↗</a><a href="@item.LiveDemoUrl">Live Demo ↗</a></div>
+                </div>
+            </article>
+        }
+
+    </div>
+</div>

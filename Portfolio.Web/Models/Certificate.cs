@@ -20,8 +20,7 @@ namespace Portfolio.Web.Models
         [MaxLength(50, ErrorMessage = "{0} cannot be longer than 50 characters.")]
         public string Year { get; set; }
         [DisplayName("Image")]
-        [Required(ErrorMessage = "{0} is required.")]
-        public string ImageName { get; set; }
+        public string? ImageName { get; set; }
 
 
     }

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<SkillCategory>
+<div class="wrap">
+    <div class="block-head reveal">
+        <span class="section-tag">02 — Stack</span>
+        <h2 class="section-title">Skill</h2>
+    </div>
+    <div class="skills-grid reveal">
+        @foreach (var category in Model)
+        {
+            <div class="skill-card">
+
+                <h3>@category.Name</h3>
+
+                <div class="chips">
+
+                    @foreach (var skill in category.Skills)
+                    {
+                        <span class="chip">@skill.SkillsTitle</span>
+                    }
+
+                </div>
+
+            </div>
+        }
+    </div>
+</div>

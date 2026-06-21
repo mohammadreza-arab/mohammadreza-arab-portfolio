@@ -12,7 +12,6 @@ namespace Portfolio.Web.Data.Configurations
             builder.Property(x=>x.HeroTitle).IsRequired().HasMaxLength(100);
             builder.Property(x=>x.HeroName).IsRequired().HasMaxLength(100);
             builder.Property(x=>x.HeroDescription).IsRequired().HasMaxLength(300);
-            builder.Property(x=>x.HeroImageName).IsRequired();
             builder.Property(x=>x.HeroLocation).IsRequired().HasMaxLength(100);
             builder.Property(x=>x.HeroStatus).IsRequired().HasMaxLength(100);
             builder.Property(x=>x.HeroFocus).IsRequired().HasMaxLength(100);
