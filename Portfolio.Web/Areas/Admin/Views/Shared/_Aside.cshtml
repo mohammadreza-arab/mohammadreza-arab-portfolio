@@ -2,7 +2,7 @@
     <div class="sb-brand">Mohammadreza<b>.</b>Arab</div>
     <div class="sb-group">Verwaltung</div>
     <nav id="navList">
-        <a class="sb-link">
+        <a asp-action="Index" asp-area="admin" asp-controller="Dashboard" class="sb-link">
             <svg class="ic" viewBox="0 0 24 24">
                 <path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z">
                 </path>
@@ -15,6 +15,13 @@
                 </path>
             </svg>
             Home
+        </a>
+        <a asp-area="Admin" asp-action="Index" asp-controller="SkillCategory" class="sb-link">
+            <svg class="ic" viewBox="0 0 24 24">
+                <path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z">
+                </path>
+            </svg>
+            Skill Category
         </a>
         <a class="sb-link " onclick="go('projekte')">
             <svg class="ic" viewBox="0 0 24 24">

@@ -10,150 +10,153 @@
 <div class="form-card">
 
     <div class="fc-body">
-<form asp-action="Create"
-      asp-controller="HomePageSetting"
-      asp-area="Admin"
-      method="post"
-      enctype="multipart/form-data">
+        <form asp-action="Create"
+              asp-controller="HomePageSetting"
+              asp-area="Admin"
+              method="post"
+              enctype="multipart/form-data">
 
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-    <h3>Hero</h3>
+            <h3>Hero</h3>
 
-    <div class="field-grid">
+            <div class="field-grid">
 
-        <div class="field">
-            <label asp-for="HeroName"></label>
-            <input asp-for="HeroName" class="form-control" />
-            <span asp-validation-for="HeroName" class="text-danger"></span>
-        </div>
+                <div class="field">
+                    <label asp-for="HeroName"></label>
+                    <input asp-for="HeroName" class="form-control" />
+                    <span asp-validation-for="HeroName" class="text-danger"></span>
+                </div>
 
-        <div class="field">
-            <label asp-for="HeroTitle"></label>
-            <input asp-for="HeroTitle" class="form-control" />
-            <span asp-validation-for="HeroTitle" class="text-danger"></span>
-        </div>
+                <div class="field">
+                    <label asp-for="HeroTitle"></label>
+                    <input asp-for="HeroTitle" class="form-control" />
+                    <span asp-validation-for="HeroTitle" class="text-danger"></span>
+                </div>
 
-        <div class="field span2">
-            <label asp-for="HeroDescription"></label>
-            <textarea asp-for="HeroDescription" class="form-control" id="editor"></textarea>
-            <span asp-validation-for="HeroDescription" class="text-danger"></span>
-        </div>
+                <div class="field span2">
+                    <label asp-for="HeroDescription"></label>
+                    <textarea asp-for="HeroDescription" class="form-control" id="editor"></textarea>
+                    <span asp-validation-for="HeroDescription" class="text-danger"></span>
+                </div>
 
-        <div class="field span2">
-            <label asp-for="HeroImageName"></label>
-            <input type="file" name="HeroImageFile" class="form-control" />
-        </div>
+                <div class="field span2">
+                    <label asp-for="HeroImageName"></label>
+                    <input type="file" name="HeroImageFile" class="form-control" />
+                </div>
 
-        <div class="field">
-            <label asp-for="HeroLocation"></label>
-            <input asp-for="HeroLocation" class="form-control" />
-            <span asp-validation-for="HeroLocation" class="text-danger"></span>
-        </div>
+                <div class="field">
+                    <label asp-for="HeroLocation"></label>
+                    <input asp-for="HeroLocation" class="form-control" />
+                    <span asp-validation-for="HeroLocation" class="text-danger"></span>
+                </div>
 
-        <div class="field">
-            <label asp-for="HeroStatus"></label>
-            <input asp-for="HeroStatus" class="form-control" />
-            <span asp-validation-for="HeroStatus" class="text-danger"></span>
-        </div>
+                <div class="field">
+                    <label asp-for="HeroStatus"></label>
+                    <input asp-for="HeroStatus" class="form-control" />
+                    <span asp-validation-for="HeroStatus" class="text-danger"></span>
+                </div>
 
-        <div class="field">
-            <label asp-for="HeroFocus"></label>
-            <input asp-for="HeroFocus" class="form-control" />
-            <span asp-validation-for="HeroFocus" class="text-danger"></span>
-        </div>
+                <div class="field">
+                    <label asp-for="HeroFocus"></label>
+                    <input asp-for="HeroFocus" class="form-control" />
+                    <span asp-validation-for="HeroFocus" class="text-danger"></span>
+                </div>
 
-        <div class="field">
-            <label asp-for="HeroLanguage"></label>
-            <input asp-for="HeroLanguage" class="form-control" />
-            <span asp-validation-for="HeroLanguage" class="text-danger"></span>
-        </div>
+                <div class="field">
+                    <label asp-for="HeroLanguage"></label>
+                    <input asp-for="HeroLanguage" class="form-control" />
+                    <span asp-validation-for="HeroLanguage" class="text-danger"></span>
+                </div>
 
-    </div>
+            </div>
 
-    <h3>About</h3>
+            <h3>About</h3>
 
-    <div class="field-grid">
+            <div class="field-grid">
 
-        <div class="field">
-            <label asp-for="AboutTitle"></label>
-            <input asp-for="AboutTitle" class="form-control" />
-            <span asp-validation-for="AboutTitle" class="text-danger"></span>
-        </div>
+                <div class="field">
+                    <label asp-for="AboutTitle"></label>
+                    <input asp-for="AboutTitle" class="form-control" />
+                    <span asp-validation-for="AboutTitle" class="text-danger"></span>
+                </div>
 
-        <div class="field">
-            <label asp-for="AboutSummary"></label>
-            <input asp-for="AboutSummary" class="form-control" />
-            <span asp-validation-for="AboutSummary" class="text-danger"></span>
-        </div>
+                <div class="field">
+                    <label asp-for="AboutSummary"></label>
+                    <input asp-for="AboutSummary" class="form-control" />
+                    <span asp-validation-for="AboutSummary" class="text-danger"></span>
+                </div>
 
-        <div class="field span2">
-            <label asp-for="AboutDescription"></label>
+                <div class="field span2">
+                    <label asp-for="AboutDescription"></label>
                     <textarea asp-for="AboutDescription" class="form-control" id="editorr"></textarea>
-            <span asp-validation-for="AboutDescription" class="text-danger"></span>
-        </div>
+                    <span asp-validation-for="AboutDescription" class="text-danger"></span>
+                </div>
 
+            </div>
+
+            <h3>Contact</h3>
+
+            <div class="field-grid">
+
+                <div class="field">
+                    <label asp-for="TitleContact"></label>
+                    <input asp-for="TitleContact" class="form-control" />
+                    <span asp-validation-for="TitleContact" class="text-danger"></span>
+                </div>
+
+                <div class="field">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="field">
+                    <label asp-for="EmailUrl"></label>
+                    <input asp-for="EmailUrl" class="form-control" />
+                    <span asp-validation-for="EmailUrl" class="text-danger"></span>
+                </div>
+
+                <div class="field">
+                    <label asp-for="GithubUrl"></label>
+                    <input asp-for="GithubUrl" class="form-control" />
+                    <span asp-validation-for="GithubUrl" class="text-danger"></span>
+                </div>
+
+                <div class="field">
+                    <label asp-for="LinkedinUrl"></label>
+                    <input asp-for="LinkedinUrl" class="form-control" />
+                    <span asp-validation-for="LinkedinUrl" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <h3>SEO</h3>
+
+            <div class="field-grid">
+
+                <div class="field">
+                    <label asp-for="MetaTitle"></label>
+                    <input asp-for="MetaTitle" class="form-control" />
+                    <span asp-validation-for="MetaTitle" class="text-danger"></span>
+                </div>
+
+                <div class="field span2">
+                    <label asp-for="MetaDescription"></label>
+                    <textarea asp-for="MetaDescription" class="form-control"></textarea>
+                    <span asp-validation-for="MetaDescription" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Save
+            </button>
+            <a asp-area="admin" asp-controller="HomePageSetting" asp-action="index" class="btn btn-danger">
+                Cancel
+            </a>
+        </form>
     </div>
-
-    <h3>Contact</h3>
-
-    <div class="field-grid">
-
-        <div class="field">
-            <label asp-for="TitleContact"></label>
-            <input asp-for="TitleContact" class="form-control" />
-            <span asp-validation-for="TitleContact" class="text-danger"></span>
-        </div>
-
-        <div class="field">
-            <label asp-for="Email"></label>
-            <input asp-for="Email" class="form-control" />
-            <span asp-validation-for="Email" class="text-danger"></span>
-        </div>
-
-        <div class="field">
-            <label asp-for="EmailUrl"></label>
-            <input asp-for="EmailUrl" class="form-control" />
-            <span asp-validation-for="EmailUrl" class="text-danger"></span>
-        </div>
-
-        <div class="field">
-            <label asp-for="GithubUrl"></label>
-            <input asp-for="GithubUrl" class="form-control" />
-            <span asp-validation-for="GithubUrl" class="text-danger"></span>
-        </div>
-
-        <div class="field">
-            <label asp-for="LinkedinUrl"></label>
-            <input asp-for="LinkedinUrl" class="form-control" />
-            <span asp-validation-for="LinkedinUrl" class="text-danger"></span>
-        </div>
-
-    </div>
-
-    <h3>SEO</h3>
-
-    <div class="field-grid">
-
-        <div class="field">
-            <label asp-for="MetaTitle"></label>
-            <input asp-for="MetaTitle" class="form-control" />
-            <span asp-validation-for="MetaTitle" class="text-danger"></span>
-        </div>
-
-        <div class="field span2">
-            <label asp-for="MetaDescription"></label>
-            <textarea asp-for="MetaDescription" class="form-control"></textarea>
-            <span asp-validation-for="MetaDescription" class="text-danger"></span>
-        </div>
-
-    </div>
-
-    <button type="submit" class="btn btn-primary">
-        Save
-    </button>
-</form>
-</div>
 </div>
 @section Style
 {

@@ -1,0 +1,37 @@
+﻿@model Portfolio.Web.Models.SkillCategory;
+<div class="topbar">
+    <div style="display:flex;align-items:center;gap:14px;">
+        <div>
+            <h1 id="pageTitle">Skill Category Edit</h1>
+        </div>
+    </div>
+</div>
+<div class="form-card">
+
+    <div class="fc-body">
+        <form asp-action="Delete"
+              asp-controller="SkillCategory"
+              asp-area="Admin"
+              method="post">
+            <input type="hidden" asp-for="Id" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="field-grid " style=" grid-template-columns: 1fr !important;">
+
+                <div class="field">
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div>
+                <button type="submit" class="btn btn-danger">
+                    Delete
+                </button>
+                <a asp-area="admin" asp-controller="SkillCategory" asp-action="index" class="btn btn-danger">
+                    Cancel
+                </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

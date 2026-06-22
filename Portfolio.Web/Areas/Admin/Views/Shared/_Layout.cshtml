@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] -Panel Admin</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
     <link href="~/css/admin.css" rel="stylesheet" />
     @await RenderSectionAsync("Style", required: false)
 </head>
@@ -14,6 +16,9 @@
             @RenderBody()
         </main>
     </div>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.esm.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
     <script src="~/js/admin.js"></script>
 </body>

@@ -2,7 +2,7 @@
 <div class="topbar">
     <div style="display:flex;align-items:center;gap:14px;">
         <div>
-            <h1 id="pageTitle">HomePageSetting Edit</h1>
+            <h1 id="pageTitle">HomePageSetting Delete</h1>
         </div>
     </div>
 </div>
@@ -106,7 +106,7 @@
             <button type="submit" class="btn btn-danger">
                 Delete
             </button>
-            <a asp-area="admin" asp-controller="HomePageSetting" asp-action="index" class="text-danger">
+            <a asp-area="admin" asp-controller="HomePageSetting" asp-action="index" class="btn btn-danger">
                 Cancel
             </a>
         </form>
@@ -118,16 +118,11 @@
     <link href="~/lib/ckeditor/css/ckeditor5.css" rel="stylesheet" />
     <link href="~/lib/ckeditor/css/ckeditor5-content.css" rel="stylesheet" />
     <link href="~/lib/ckeditor/css/ckeditor5-editor.css" rel="stylesheet" />
-    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
 }
 @section Scripts
 {
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <partial name="_ValidationScriptsPartial" />
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.esm.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="module">
 
         import { ClassicEditor, editorConfig }
