@@ -1,0 +1,38 @@
+﻿@model SkillCreateViewModel;
+<div class="topbar">
+    <div style="display:flex;align-items:center;gap:14px;">
+        <div>
+            <h1 id="pageTitle">Skill Create</h1>
+        </div>
+    </div>
+</div>
+<div class="form-card">
+    <div class="fc-body">
+        <form asp-action="Create"
+              asp-controller="Skill"
+              asp-area="Admin"
+              method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="field-grid">
+                <div class="field">
+                    <label asp-for="SkillsTitle"></label>
+                    <input asp-for="SkillsTitle" class="form-control" />
+                    <span asp-validation-for="SkillsTitle" class="text-danger"></span>
+                </div>
+                <div class="field">
+                <label asp-for="SkillCategoryId"></label>
+                <select asp-for="SkillCategoryId"
+                        asp-items="Model.Categories"
+                        class="form-control">
+                </select>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">
+                Save
+            </button>
+            <a asp-area="admin" asp-controller="Skill" asp-action="index" class="btn btn-danger">
+                Cancel
+            </a>
+        </form>
+    </div>
+</div>

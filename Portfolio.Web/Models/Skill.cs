@@ -13,7 +13,7 @@ namespace Portfolio.Web.Models
         [MaxLength(100, ErrorMessage = "{0} cannot be longer than 100 characters.")]
         public string SkillsTitle { get; set; }
         public SkillCategory Category { get; set; }
-        [ForeignKey(nameof(SkillCategory))]
+        [ForeignKey("SkillCategoryId")]
         public int SkillCategoryId { get; set; }
     }
 }

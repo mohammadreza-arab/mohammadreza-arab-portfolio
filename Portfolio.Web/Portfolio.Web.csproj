@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\Images\certificate\" />
+    <Folder Include="wwwroot\Images\hero\" />
     <Folder Include="wwwroot\Images\project\" />
   </ItemGroup>
 
